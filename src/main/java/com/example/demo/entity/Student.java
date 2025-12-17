@@ -3,10 +3,13 @@ package.com.example.demo.entity;
 import java.time.LocalDate;
 
 import jarkarta.persistence.entity;
+import jarkarta.persistence.GenerateValue;
+import jarkarta.persistence.GenerationType;
 import jarkarta.persistence.Id;
 @entity
 public class Student{
     @Id
+    @GenerateValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String dept;
