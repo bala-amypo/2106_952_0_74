@@ -1,15 +1,13 @@
-package.com.example.demo.entity;
+package com.example.demo.entity;
 
 import java.time.LocalDate;
 
-import jarkarta.persistence.entity;
-import jarkarta.persistence.GenerateValue;
-import jarkarta.persistence.GenerationType;
-import jarkarta.persistence.Id;
-@entity
+
+import jakarta.persistence.*;
+@Entity
 public class Student{
     @Id
-    @GenerateValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String dept;
@@ -27,19 +25,19 @@ public class Student{
     public void setName(String name){
         this.name=name;
     }
-      public long getDept(){
+      public String getDept(){
         return dept;
     }
     public void setDept(String dept){
         this.dept=dept;
     }
-     public long getDob(){
+     public LocalDate getDob(){
         return dob;
     }
     public void Dob(LocalDate dob){
         this.dob=dob;
     }
-     public long getCgpa(){
+     public float getCgpa(){
         return cgpa;
     }
     public void setCgpa(float cgpa){
