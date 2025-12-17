@@ -2,10 +2,11 @@ package.com.example.demo.entity;
 
 import java.time.LocalDate;
 
-import jar
+import jarkarta.persistence.entity;
+import jarkarta.persistence.Id;
 @entity
-
 public class Student{
+    @Id
     private Long id;
     private String name;
     private String dept;
