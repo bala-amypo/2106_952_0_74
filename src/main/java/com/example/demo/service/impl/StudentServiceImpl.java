@@ -19,4 +19,6 @@ public class StudentServiceImpl implements StudentService {
     }
 }
 @Override
-public 
+public <ListStudent> getAllStudents(){
+    
+}
