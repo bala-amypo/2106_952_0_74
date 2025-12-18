@@ -1,16 +1,18 @@
 package com.example.demo.entity;
 
 import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
-
-import jakarta.persistence.*;
 @Entity
-public class Student{
+public class Student {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @NotNull
     private Long id;
     private String name;
-    @Not
     private String dept;
     private LocalDate dob;
     private float cgpa;
@@ -20,30 +22,31 @@ public class Student{
     public void setId(Long id){
         this.id=id;
     }
-      public String getName(){
+    public String getName(){
         return name;
     }
     public void setName(String name){
         this.name=name;
     }
-      public String getDept(){
+    public String getDept(){
         return dept;
     }
     public void setDept(String dept){
         this.dept=dept;
     }
-     public LocalDate getDob(){
+    public LocalDate getDob(){
         return dob;
     }
-    public void Dob(LocalDate dob){
+    public void setDob(LocalDate dob){
         this.dob=dob;
     }
-     public float getCgpa(){
+    public float getCgpa(){
         return cgpa;
     }
     public void setCgpa(float cgpa){
         this.cgpa=cgpa;
     }
+    
     public Student(){
 
     }
@@ -54,4 +57,5 @@ public class Student{
         this.dob=dob;
         this.cgpa=cgpa;
     }
+    
 }
