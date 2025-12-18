@@ -44,7 +44,7 @@ public class StudentServiceImpl implements StudentService{
         boolean status=stdrepo.existById(id);
         if(status){
             stdrepo.deleteById(id);
-            return "Student Deleted Successfully";
+            return "Student Deleted Sucessfully";
         }
         else{
             return "Student with ID" +id+ " not found";
