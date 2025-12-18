@@ -10,7 +10,7 @@ import jakarta.persistence.GenerationType;
 public class Student {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @NotNull
+    @NotNull(message="name should not be null")
     private Long id;
     private String name;
     private String dept;

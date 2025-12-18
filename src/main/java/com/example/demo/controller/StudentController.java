@@ -8,7 +8,6 @@ import jakarta.validation.constraints.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +22,7 @@ public class StudentController {
     StudentService stdser;
     
     @PostMapping("/addStudent")
-    public Student addStudent(@RequestBody Student st){
+    public Student addStudent(@valid @RequestBody Student st){
         return stdser.poststudent(st);
     }
     @GetMapping("/getall")
@@ -31,7 +30,7 @@ public class StudentController {
         return stdser.getAllStudents();
     }
     @GetMapping("/getById/id")
-    public Optional<Student> getId(@PathVariable Long id){
+    public Optional<Student> getId(@PathVa````````````  1riable Long id){
         return stdser.getById(id);
     }
     @PutMapping("/update/{id}")
