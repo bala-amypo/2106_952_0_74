@@ -10,6 +10,7 @@ public class Student{
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Not
     private String dept;
     private LocalDate dob;
     private float cgpa;
