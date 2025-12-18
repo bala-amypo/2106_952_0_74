@@ -37,5 +37,5 @@ public class StudentController {
         return stdser.updateData(id,st);
     }
     @DeleteMapping("/delete/{id}")
-    public String delete(@pathvariable Long id)
+    public String delete
 }
