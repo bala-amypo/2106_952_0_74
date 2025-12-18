@@ -30,7 +30,7 @@ public class StudentController {
         return stdser.getAllStudents();
     }
     @GetMapping("/getById/id")
-    public Optional<Student> getId(@PathVa````````````  1riable Long id){
+    public Optional<Student> getId(@PathVariable Long id){
         return stdser.getById(id);
     }
     @PutMapping("/update/{id}")
