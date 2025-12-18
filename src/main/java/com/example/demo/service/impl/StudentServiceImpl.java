@@ -18,7 +18,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student postStudent(Student st) {   // ✅ FIXED NAME
+    public Student postStudent(Student st) {   
         return stdrepo.save(st);
     }
 
@@ -31,11 +31,5 @@ public class StudentServiceImpl implements StudentService {
     public Optional<Student> getById(Long id) {
         return stdrepo.findById(id);
     }
-    @Override
-    public String updateData(Long id,Student st){
-        boolean status=stdrepo.existById(id);
-        if(status){
-           
-        }
-    }
+    
 }
