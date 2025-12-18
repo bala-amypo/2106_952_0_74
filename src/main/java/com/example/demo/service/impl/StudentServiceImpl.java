@@ -11,12 +11,17 @@ import com.example.demo.service.StudentService;
 public class StudentServiceImpl implements StudentService {
 
     @Autowired
-    private StudentRepository studentRepository;
-
+    StudentRepository stdrepo;
+    @Override
+    public Student poststudent(Student st){
+        return stdrepo.save(st);
+    }
     @Override
     public Student postStudent(Student student) {
         return studentRepository.save(student);
     }
     @Override
-    public Optional<Student
+    public Optional<Student> getById(Long id){
+        return stdrepo.findById(id);
+    }
 }
